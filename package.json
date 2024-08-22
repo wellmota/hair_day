@@ -4,7 +4,7 @@
   "description": "Web application to schedule haircuts",
   "main": "index.js",
   "scripts": {
-    "server": "json-server --watch server.json --port 3333",
+    "server": "json-server --watch server.json --port 3001",
     "dev": "webpack serve",
     "build": "webpack"
   },
@@ -12,6 +12,7 @@
   "author": "Wellington Mota",
   "license": "ISC",
   "dependencies": {
+    "dayjs": "^1.11.10",
     "json-server": "^1.0.0-alpha.21"
   },
   "devDependencies": {
