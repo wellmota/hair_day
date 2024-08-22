@@ -27,7 +27,7 @@ export function hoursLoad({ date }) {
       hourHeaderAdd("Manhã")
     } else if (hour === "13:00") {
       hourHeaderAdd("Tarde")
-    } else if (hour === "17:00") {
+    } else if (hour === "18:00") {
       hourHeaderAdd("Noite")
     }
 
