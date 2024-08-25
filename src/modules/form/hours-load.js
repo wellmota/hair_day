@@ -4,10 +4,14 @@ import { openingHours } from "../../utils/opening-hours.js"
 
 const hours = document.getElementById("hours")
 
-export function hoursLoad({ date }) {
-
+export function hoursLoad({ date, dailySchedules }) {
   // clear hours list
   hours.innerHTML = ""
+
+  // get hours unavailable
+  const unavailableHours = dailySchedules.map((schedule) =>
+    dayjs(schedule.when).format("HH:mm")
+  )
 
   const opening = openingHours.map((hour) => {
     const [scheduleHour] = hour.split(":")
@@ -16,9 +20,11 @@ export function hoursLoad({ date }) {
 
     const isHourPast = dayjs(date).add(scheduleHour, "hour").isBefore(dayjs())
 
+    const available = !unavailableHours.includes(hour) && !isHourPast
+
     return {
       hour,
-      available: !isHourPast,
+      available,
     }
   })
 
