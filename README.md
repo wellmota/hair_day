@@ -1,4 +1,9 @@
 #
+
+```
+STUDY PROJECT
+```
+
 Learning how to setup webpack and server
 In this study project, we will be focusing on learning JavaScript before diving into libraries. We will cover various topics such as setting up webpack and a server, using Babel for transpiling, understanding bundling concepts, exploring JavaScript in-depth including iterators, capturing and treating events, as well as making API requests using fetch and saving data.
 
